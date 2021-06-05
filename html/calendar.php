@@ -1,4 +1,5 @@
 <?php
+    $title = "カレンダー";
     require('./header.php');
     $page = "calendar";
 ?>
