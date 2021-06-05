@@ -1,4 +1,5 @@
 <?php
+    $title = "認知症予防システム";
     require('./header.php');
     $page = "home";
 ?>
