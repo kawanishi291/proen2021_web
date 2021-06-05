@@ -39,7 +39,7 @@ foreach($stmt as $row){
 ?>
                 {
                     id: '<?=$row['num']?>',
-                    title: '<?=$row['name']." ".$row['score']?>',
+                    title: '<?=$row['name']." ".(($row['score'] / $row['max']) * 100)."%"?>',
                     start: '<?=date('Y-m-d',strtotime($row['datetime']))?>',
                     url: './index.php#<?=$row['num']?>'
                 },
