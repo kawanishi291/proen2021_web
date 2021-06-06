@@ -13,10 +13,11 @@
     $start = date("Y-m-d", strtotime("-6 day"));
     $start .= " 00:00:00";
     $end = date("Y-m-d", strtotime("-0 day"));
-    $end .= " 99:99:99";
+    $end .= " 23:59:59";
 
     include "./pdo_connect.php";
-    $sql = "SELECT * FROM score JOIN music WHERE score.id = music.id AND `datetime` >= '$start' AND `datetime` <= '$end'";
+    // $sql = "SELECT * FROM score JOIN music WHERE score.id = music.id AND `datetime` >= '$start' AND `datetime` <= '$end'";
+    $sql = "SELECT * FROM score JOIN music WHERE score.id = music.id AND `datetime` BETWEEN '$start' AND '$end'";
     $stmt = $pdo -> query($sql);
     $cnt = 0;
     $max_list = [0, 0, 0, 0, 0, 0, 0];
