@@ -18,7 +18,7 @@
     ini_set('display_errors', "On");
     //phpinfo();
     include "./pdo_connect.php";
-    $sql = "SELECT * FROM score JOIN music WHERE score.id = music.id";
+    $sql = "SELECT * FROM score JOIN music WHERE score.id = music.id ORDER BY score.datetime DESC";
     $stmt = $pdo -> query($sql);
     foreach($stmt as $row){
 ?>
