@@ -13,24 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
         events: [
-            // {
-            //     id: '1',
-            //     title: 'event1',
-            //     start: '2021-06-07',
-            //     url: './index.php#1'
-            // },
-            // {
-            //     id: '2',
-            //     title: 'event2',
-            //     start: '2021-06-24',
-            //     url: '#'
-            // },
-            // {
-            //     id: '3',
-            //     title: 'event3',
-            //     start: '2021-06-30',
-            //     url: '#'
-            // }
 <?php
 include "./pdo_connect.php";
 $sql = "SELECT * FROM score JOIN music WHERE score.id = music.id";
